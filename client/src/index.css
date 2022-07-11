@@ -10,3 +10,16 @@ body {
   background-color: black;
   color: white;
 }
+
+.app {
+  padding: 2rem 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+input {
+  appearance: none;
+}
