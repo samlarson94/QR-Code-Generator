@@ -9,10 +9,17 @@ function App() {
 
   //Generate QR Code function - Image only needs a QR Code to display
   const GenerateQRCode = () => {
-    QRCode.toDataURL(url, (err, url) => {
+    QRCode.toDataURL(url, {
+      width: 800,
+      margin: 2,
+      color: {
+        dark: '#ffffffff',
+        light: '#000000ff'
+      }
+    }, (err, url) => {
       if (err) {
         return console.error(err);
-      }else {
+      } else {
         console.log(url);
         setQrcode(url);
       }
