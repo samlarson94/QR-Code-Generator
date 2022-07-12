@@ -25,13 +25,24 @@ function App() {
       }
     })
   }
+//HandleKeyDown Event for Input
+  const handleKeyDown = event => {
+    console.log('Key Pressed: ', event.key);
+    console.log('URL Input Entered: ', url);
+
+    if (event.key === 'Enter') {
+      GenerateQRCode();
+    }
+  }
+
 
   return (
     <div className="app">
       <h1>QR Code Generator</h1>
       <input type="text" placeholder="https://samlarson.tech" value={url}
-      onChange={(evt) => setUrl(evt.target.value)} />
-      <button onClick={GenerateQRCode} class="generate-btn">Generate QR Code</button>
+      onChange={(evt) => setUrl(evt.target.value)} 
+      onKeyDown={handleKeyDown} />
+      <button onClick={GenerateQRCode} className="generate-btn">Generate QR Code</button>
       {/* Wrapping QRCode in Conditional - Adding link to Download */}
       {qrcode && <>
         <img src={qrcode} />
@@ -40,6 +51,6 @@ function App() {
       }
     </div>
   )
-}
+};
 
 export default App
