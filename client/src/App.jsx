@@ -25,7 +25,12 @@ function App() {
       <input type="text" placeholder="https://samlarson.tech" value={url}
       onChange={(evt) => setUrl(evt.target.value)} />
       <button onClick={GenerateQRCode} class="generate-btn">Generate QR Code</button>
-      <img src={qrcode} />
+      {/* Wrapping QRCode in Conditional - Adding link to Download */}
+      {qrcode && <>
+        <img src={qrcode} />
+        <a href={qrcode} download="qrcode.png">Download</a>
+        </>
+      }
     </div>
   )
 }
