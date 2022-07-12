@@ -10,7 +10,7 @@ A deployed version of this [QR-Generator can be found here](https://samlarson94.
 
 To run and edit on local host, be sure to fork and then clone the repo's code down to your local machine.  Make sure you have the most recent versions of React.js and Node.js installed.  Also, make sure to run an "npm i" command in the app's root folder, or manually run "npm install qrcode" to install the npm package.
 
-Once complete, run a simple "npm run dev" command to launch the app in a development environment.
+Once complete, navigate to the client folder (cd client) and run a simple "npm run dev" command to launch the app in a development environment.
 
 ## Future Development
 I plan on building a few larger applications around this QR Generator in the coming weeks, such as:
