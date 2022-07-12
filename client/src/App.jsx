@@ -22,7 +22,8 @@ function App() {
   return (
     <div className="app">
       <h1>QR Code Generator</h1>
-      <input type="text" placeholder="https://samlarson.tech" />
+      <input type="text" placeholder="https://samlarson.tech" value={url}
+      onChange={(evt) => setUrl(evt.target.value)} />
       <button onClick={GenerateQRCode} class="generate-btn">Generate QR Code</button>
       <img src={qrcode} />
     </div>
